@@ -374,7 +374,7 @@ https://templatemo.com/tm-557-grad-school
           </div>
         </div>
         <div class="col-md-6">
-          <form id="contact-form" method="post">
+          <form id="contact-form" action="https://formspree.io/f/xbljjayz" method="POST">
              <div class="row">
                 <div class="col-md-6">
                    <fieldset>
@@ -430,31 +430,7 @@ https://templatemo.com/tm-557-grad-school
     <script src="assets/js/video.js"></script>
     <script src="assets/js/slick-slider.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-       $(document).ready(function() {
-          $('#contact-form').on('submit', function(e) {
-             e.preventDefault(); // Evita que el formulario se envíe de manera tradicional
-    
-             // Serializar los datos del formulario
-             var formData = $(this).serialize();
-    
-             // Hacer la petición AJAX
-             $.ajax({
-                type: 'POST',
-                url: 'send_email.php', // Aquí se envían los datos a tu archivo PHP
-                data: formData,
-                success: function() {
-                   alert('El mensaje ha sido enviado.'); // Alerta de éxito
-                   $('#contact-form')[0].reset(); // Limpiar el formulario después de enviar
-                },
-                error: function() {
-                   alert('Hubo un error al enviar el mensaje. Inténtalo de nuevo.'); // Alerta de error
-                }
-             });
-          });
-       });
-    </script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
 
     <script>
         //according to loftblog tut
